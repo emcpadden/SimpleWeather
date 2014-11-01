@@ -3,19 +3,25 @@
 //  SimpleWeather
 //
 //  Created by Ed McPadden on 10/31/14.
-//  Copyright (c) 2014 Big Nerd Ranch. All rights reserved.
+//  Copyright (c) 2014 Big Face. All rights reserved.
 //
 
 #import "WXAppDelegate.h"
+#import "WXController.h"
+#import <TSMessage.h>
+
 
 @implementation WXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    // 1
+    self.window.rootViewController = [[WXController alloc] init];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    // 2
+    [TSMessage setDefaultViewController: self.window.rootViewController];
     return YES;
 }
 

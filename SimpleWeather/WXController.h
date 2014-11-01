@@ -1,5 +1,5 @@
 //
-//  WXAppDelegate.h
+//  WXController.h
 //  SimpleWeather
 //
 //  Created by Ed McPadden on 10/31/14.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WXAppDelegate : UIResponder <UIApplicationDelegate>
+@interface WXController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
 
 @end
